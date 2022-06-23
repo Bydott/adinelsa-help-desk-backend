@@ -1,10 +1,15 @@
 import { Router } from "express";
 import {
-  getAllIncidencias,
+  getAllIncidence,
+  createNewIncidence,
+  getIncidenceById,
+
 } from "../controllers/incidencias.controller";
 
 const router = Router();
 
-router.get("/incidencias", getAllIncidencias);
+router.get("/incidencias", getAllIncidence);
+router.get("/registrarIncidencia", createNewIncidence);
+router.get("/designarIncidencia", getIncidenceById);
 
 export default router;
